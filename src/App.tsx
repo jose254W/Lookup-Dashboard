@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { Textarea, Button, Card } from "@nextui-org/react";
+import { Textarea } from "@nextui-org/react";
 import { CustomBreadcrumb } from "./components/Breadcrumb.tsx";
 import { SearchSection } from "./components/SearchSection.tsx";
 import { BasketSummarySection } from "./components/BasketSummary.tsx";
