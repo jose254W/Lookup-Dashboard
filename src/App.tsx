@@ -5,6 +5,7 @@ import { CustomBreadcrumb } from "./components/Breadcrumb.tsx";
 import { SearchSection } from "./components/SearchSection.tsx";
 import { BasketSummarySection } from "./components/BasketSummary.tsx";
 import { CollapsibleSection } from "./components/CollapsibleSection.tsx";
+import TicketDetails from "./components/TicketDetails.tsx"; // TicketDetails import
 import type { BasketSummary } from "./types/basket.ts";
 import { Bell, CreditCard } from "lucide-react";
 
@@ -62,9 +63,26 @@ export default function App() {
               }
               className="bg-gray-900 p-6 rounded-lg"
             >
-              <Textarea
-                placeholder="Transaction details go here."
-                className="bg-gray-600 text-white"
+              <TicketDetails
+                event="Concert XYZ"
+                venue="Madison Square Garden"
+                date="Fri, 22 Dec 2024, 19:00"
+                seats="Section A, Row 5, Seat 12"
+                value="$150"
+                status="Confirmed"
+                eventType="Music Concert"
+                lineRef="LREF123456"
+                ticketRef="TREF123456"
+                barcode="BARCODE123456"
+                remoteRef="REMOTE123456"
+                accessControlStatus="Granted"
+                refundAmount="$50"
+                refundDate="Wed, 20 Dec 2024"
+                refundChannel="Credit Card"
+                onRefund={() => console.log("Refund requested")}
+                onAuthorizeAllRefunds={() =>
+                  console.log("Authorize all refunds requested")
+                }
               />
             </CollapsibleSection>
 
